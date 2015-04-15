@@ -1,4 +1,4 @@
-#include <windows.h>
+ï»¿#include <windows.h>
 #include <gl/gl.h>
 #include <gl/glut.h>
 
@@ -54,15 +54,15 @@ int main(int argc, char **argv) {
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGBA);
 	glutInitWindowSize(250, 250);
 	glutInitWindowPosition(100,100);
-	glutCreateWindow("Æ®·£½ºÆ÷¸Ó ÇÁ·ÎÁ§Æ®!");
+	glutCreateWindow("Transformation Project");
 
-	init(); // ÃÊ±âÈ­
+	init(); // ì´ˆê¸°í™”
 
-	// Äİ¹é ÇÔ¼ö µî·Ï 
+	// ì½œë°± í•¨ìˆ˜ ë“±ë¡ 
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 
 
-	glutMainLoop(); // ¹«ÇÑ·çÇÁ
+	glutMainLoop(); // ë¬´í•œë£¨í”„
 	return 0;
 }
