@@ -1,6 +1,15 @@
-﻿#include <windows.h>
-#include <gl/gl.h>
-#include <gl/glut.h>
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+#else
+#ifdef _WIN32
+#include <windows.h>
+#endif
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#endif
 
 void init(void) {
 	glClearColor(0.8, 0.4, 0.5, 0.0);
