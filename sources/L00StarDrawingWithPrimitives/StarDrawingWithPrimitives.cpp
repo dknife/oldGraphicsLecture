@@ -1,6 +1,15 @@
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+#else
+#ifdef _WIN32
 #include <windows.h>
-#include <gl/gl.h>
-#include <gl/glut.h>
+#endif
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#endif
 
 void init(void) {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -30,15 +39,15 @@ int main(int argc, char **argv) {
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGBA);
 	glutInitWindowSize(250, 250);
 	glutInitWindowPosition(100,100);
-	glutCreateWindow("³ªÀÇ ¸ÚÁø ¿ÀÇÂÁö¿¤ ÇÁ·Î±×·¥");
+	glutCreateWindow("ë‚˜ì˜ ë©‹ì§„ ì˜¤í”ˆì§€ì—˜ í”„ë¡œê·¸ë¨");
 
-	init(); // ÃÊ±âÈ­
+	init(); // ì´ˆê¸°í™”
 
-	// Äİ¹é ÇÔ¼ö µî·Ï 
+	// ì½œë°± í•¨ìˆ˜ ë“±ë¡ 
 	glutDisplayFunc(display);
-	// keyboard, mouse, idle µîÀÇ Äİ¹é ÇÔ¼öµµ µî·Ï °¡´É
+	// keyboard, mouse, idle ë“±ì˜ ì½œë°± í•¨ìˆ˜ë„ ë“±ë¡ ê°€ëŠ¥
 
 
-	glutMainLoop(); // ¹«ÇÑ·çÇÁ
+	glutMainLoop(); // ë¬´í•œë£¨í”„
 	return 0;
 }
